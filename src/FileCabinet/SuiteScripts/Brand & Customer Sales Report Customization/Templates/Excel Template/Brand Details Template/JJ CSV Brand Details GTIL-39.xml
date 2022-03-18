@@ -1,0 +1,261 @@
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet" xmlns:html="http://www.w3.org/TR/REC-html40" xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+    <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+        <Author>jj0199</Author>
+        <LastAuthor>jj0199</LastAuthor>
+        <Created>2022-03-09T12:06:15Z</Created>
+        <LastSaved>2022-03-10T10:28:13Z</LastSaved>
+    </DocumentProperties>
+    <CustomDocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+        <ICV dt:dt="string">A7BD7BB3459A4BA18347603F12504851</ICV>
+        <KSOProductBuildVer dt:dt="string">1033-11.2.0.11029</KSOProductBuildVer>
+    </CustomDocumentProperties>
+    <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
+        <WindowWidth>18468</WindowWidth>
+        <WindowHeight>9215</WindowHeight>
+        <ProtectStructure>False</ProtectStructure>
+        <ProtectWindows>False</ProtectWindows>
+    </ExcelWorkbook>
+    <Styles>
+        <Style ss:ID="Default" ss:Name="Normal">
+            <Alignment ss:Vertical="Center"/>
+            <Borders/>
+            <Font ss:FontName="Calibri" x:CharSet="134" ss:Size="11" ss:Color="#000000"/>
+            <Interior/>
+            <NumberFormat/>
+            <Protection/>
+        </Style>
+        <Style ss:ID="s49">
+            <Alignment ss:Vertical="Center"/>
+            <Borders/>
+            <Font ss:FontName="Calibri" x:CharSet="134" ss:Size="11" ss:Color="#000000"/>
+            <Interior/>
+            <NumberFormat/>
+            <Protection/>
+        </Style>
+        <Style ss:ID="s50">
+            <Alignment ss:Horizontal="Center" ss:Vertical="Center"/>
+            <Font ss:FontName="Calibri" x:CharSet="134" ss:Size="14" ss:Color="#000000" ss:Bold="1"/>
+            <Interior ss:Color="#C6E0B4" ss:Pattern="Solid"/>
+        </Style>
+        <Style ss:ID="s51">
+            <Alignment ss:Horizontal="Center" ss:Vertical="Center" ss:WrapText="1"/>
+            <Interior ss:Color="#C6E0B4" ss:Pattern="Solid"/>
+            <NumberFormat ss:Format="mmm/yy"/>
+        </Style>
+        <Style ss:ID="s52">
+            <Alignment ss:Horizontal="Center" ss:Vertical="Center" ss:WrapText="1"/>
+            <Interior ss:Color="#9BC2E6" ss:Pattern="Solid"/>
+        </Style>
+        <Style ss:ID="s53">
+            <Alignment ss:Horizontal="Center" ss:Vertical="Center"/>
+            <Interior ss:Color="#9BC2E6" ss:Pattern="Solid"/>
+        </Style>
+        <Style ss:ID="s54">
+            <Alignment ss:Vertical="Center"/>
+            <Font ss:FontName="Calibri" x:CharSet="134" ss:Size="11" ss:Color="#000000" ss:Bold="1"/>
+        </Style>
+        <Style ss:ID="s55">
+            <Alignment ss:Vertical="Center"/>
+        </Style>
+        <Style ss:ID="s56">
+            <Alignment ss:Vertical="Center"/>
+            <NumberFormat ss:Format="0%"/>
+        </Style>
+        <Style ss:ID="s57">
+            <Alignment ss:Horizontal="Right" ss:Vertical="Center"/>
+        </Style>
+        <Style ss:ID="s58">
+            <Alignment ss:Horizontal="Center" ss:Vertical="Center"/>
+        </Style>
+        <Style ss:ID="s59">
+            <Alignment ss:Horizontal="Right" ss:Vertical="Center"/>
+            <Borders/>
+            <Font ss:FontName="Calibri" x:CharSet="134" ss:Size="11" ss:Color="#000000" ss:Underline="Single"/>
+            <Interior/>
+            <NumberFormat/>
+            <Protection/>
+        </Style>
+        <Style ss:ID="s60">
+            <Alignment ss:Horizontal="Right" ss:Vertical="Center"/>
+            <Borders/>
+            <Font ss:FontName="Calibri" x:CharSet="134" ss:Size="11" ss:Color="#000000"/>
+            <Interior/>
+            <NumberFormat/>
+            <Protection/>
+        </Style>
+        <Style ss:ID="s61">
+            <Alignment ss:Horizontal="Center" ss:Vertical="Center"/>
+            <Borders/>
+            <Font ss:FontName="Calibri" x:CharSet="134" ss:Size="14" ss:Color="#000000" ss:Bold="1"/>
+            <Interior ss:Color="#C6E0B4" ss:Pattern="Solid"/>
+            <NumberFormat/>
+            <Protection/>
+        </Style>
+        <Style ss:ID="s62">
+            <Alignment ss:Vertical="Center"/>
+            <Borders/>
+            <Font ss:FontName="Calibri" x:CharSet="134" ss:Size="11" ss:Color="#000000" ss:Underline="Single"/>
+            <Interior/>
+            <NumberFormat ss:Format="0%"/>
+            <Protection/>
+        </Style>
+        <Style ss:ID="s63">
+            <Alignment ss:Vertical="Center"/>
+            <Borders/>
+            <Font ss:FontName="Calibri" x:CharSet="134" ss:Size="11" ss:Color="#000000"/>
+            <Interior/>
+            <NumberFormat ss:Format="0%"/>
+            <Protection/>
+        </Style>
+        <Style ss:ID="s64">
+            <Alignment ss:Horizontal="Center" ss:Vertical="Center" ss:WrapText="1"/>
+            <Interior ss:Color="#C6E0B4" ss:Pattern="Solid"/>
+            <NumberFormat ss:Format="mmm/yy"/>
+        </Style>
+        <Style ss:ID="s65">
+            <Alignment ss:Horizontal="Center" ss:Vertical="Center" ss:WrapText="1"/>
+            <Interior ss:Color="#9BC2E6" ss:Pattern="Solid"/>
+        </Style>
+        <Style ss:ID="s66">
+            <Alignment ss:Horizontal="Center" ss:Vertical="Center"/>
+            <Interior ss:Color="#9BC2E6" ss:Pattern="Solid"/>
+        </Style>
+        <Style ss:ID="s67">
+            <Alignment ss:Horizontal="Center" ss:Vertical="Center"/>
+            <Interior ss:Color="#9BC2E6" ss:Pattern="Solid"/>
+        </Style>
+        <Style ss:ID="s68">
+            <Alignment ss:Horizontal="Center" ss:Vertical="Center"/>
+            <Interior ss:Color="#9BC2E6" ss:Pattern="Solid"/>
+        </Style>
+        <Style ss:ID="s69">
+            <Alignment ss:Horizontal="Center" ss:Vertical="Center"/>
+            <Interior ss:Color="#9BC2E6" ss:Pattern="Solid"/>
+        </Style>
+        <Style ss:ID="s70">
+            <Alignment ss:Horizontal="Center" ss:Vertical="Center"/>
+            <Interior ss:Color="#9BC2E6" ss:Pattern="Solid"/>
+        </Style>
+        <Style ss:ID="s71">
+            <Alignment ss:Horizontal="Center" ss:Vertical="Center"/>
+            <Interior ss:Color="#9BC2E6" ss:Pattern="Solid"/>
+        </Style>
+        <Style ss:ID="s72">
+            <Alignment ss:Horizontal="Center" ss:Vertical="Center"/>
+            <Font ss:FontName="Calibri" x:CharSet="134" ss:Size="14" ss:Color="#000000" ss:Bold="1"/>
+            <Interior ss:Color="#C6E0B4" ss:Pattern="Solid"/>
+        </Style>
+    </Styles>
+    <Worksheet ss:Name="Sheet1">
+        <Table ss:ExpandedColumnCount="15" ss:ExpandedRowCount="13" x:FullColumns="1" x:FullRows="1" ss:DefaultColumnWidth="48" ss:DefaultRowHeight="14.4">
+            <Row>
+                <Cell ss:StyleID="s72" ss:MergeAcross="14" ss:MergeDown="1">
+                    <Data ss:Type="String">Customer Sales Summary -Currenth Month</Data>
+                </Cell>
+            </Row>
+            <Row/>
+            <Row>
+                <Cell ss:StyleID="s64" ss:MergeAcross="14">
+                    <Data ss:Type="Number">44440</Data>
+                </Cell>
+            </Row>
+            <Row>
+                <Cell ss:StyleID="s65" ss:MergeAcross="2" ss:MergeDown="3">
+                    <Data ss:Type="String">CURRENT MONTH</Data>
+                </Cell>
+                <Cell ss:StyleID="s66" ss:MergeAcross="1" ss:MergeDown="3">
+                    <Data ss:Type="String">Customer Type</Data>
+                </Cell>
+                <Cell ss:StyleID="s67" ss:MergeAcross="1" ss:MergeDown="3">
+                    <Data ss:Type="String">current year</Data>
+                </Cell>
+                <Cell ss:StyleID="s68" ss:MergeAcross="1" ss:MergeDown="3">
+                    <Data ss:Type="String">% of brand</Data>
+                </Cell>
+                <Cell ss:StyleID="s69" ss:MergeAcross="1" ss:MergeDown="3">
+                    <Data ss:Type="String">previous year</Data>
+                </Cell>
+                <Cell ss:StyleID="s70" ss:MergeAcross="1" ss:MergeDown="3">
+                    <Data ss:Type="String">% of previous year</Data>
+                </Cell>
+                <Cell ss:StyleID="s71" ss:MergeAcross="1" ss:MergeDown="3">
+                    <Data ss:Type="String">Change over prev Year</Data>
+                </Cell>
+            </Row>
+            <Row/>
+            <Row/>
+            <Row/>
+            <Row>
+                <Cell ss:StyleID="s54">
+                    <Data ss:Type="String">${line['brand'].value}</Data>
+                </Cell>
+                <Cell ss:StyleID="s54"/>
+                <Cell ss:StyleID="s54"/>
+                <Cell ss:StyleID="s55"/>
+                <Cell>
+                    <Data ss:Type="String">${line['Channel'].value}</Data>
+                </Cell>
+                <Cell ss:StyleID="s56"/>
+                <Cell ss:StyleID="s57">
+                    <Data ss:Type="String">${line['currentYear'].value}</Data>
+                </Cell>
+                <Cell ss:StyleID="s58"/>
+                <Cell ss:StyleID="s56">
+                    <Data ss:Type="Number">${line['totalSales'].value}</Data>
+                </Cell>
+                <Cell ss:StyleID="s56"/>
+                <Cell ss:StyleID="s57">
+                    <Data ss:Type="String">${line['previousYear'].value}</Data>
+                </Cell>
+                <Cell ss:StyleID="s56"/>
+                <Cell ss:StyleID="s56">
+                    <Data ss:Type="Number">${line['percentage_preyear'].value}</Data>
+                </Cell>
+                <Cell ss:Index="15" ss:StyleID="s56">
+                    <Data ss:Type="Number">${line['change_OverYear'].value}</Data>
+                </Cell>
+            </Row>
+            <Row>
+                <Cell ss:Index="7" ss:StyleID="s60" >
+                    <Data ss:Type="Number">${record.summary['currentYear'].value}</Data>
+                </Cell>
+                <Cell ss:Index="9" ss:StyleID="s63">
+                    <Data ss:Type="Number">${record.summary['totalSales'].value}</Data>
+                </Cell>
+                <Cell ss:Index="11" ss:StyleID="s60">
+                    <Data ss:Type="Number">${record.summary['previousYear'].value}</Data>
+                </Cell>
+                <Cell ss:Index="13" ss:StyleID="s63">
+                    <Data ss:Type="Number">${record.summary['percentage_preyear'].value}</Data>
+                </Cell>
+                <Cell ss:Index="15" ss:StyleID="s63">
+                    <Data ss:Type="Number">${record.summary['change_OverYear'].value}</Data>
+                </Cell>
+            </Row>
+            <Row ss:Index="13">
+                <Cell ss:Index="15" ss:StyleID="s63"/>
+            </Row>
+        </Table>
+        <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+            <PageSetup>
+                <Header/>
+                <Footer/>
+            </PageSetup>
+            <Selected/>
+            <TopRowVisible>0</TopRowVisible>
+            <LeftColumnVisible>0</LeftColumnVisible>
+            <PageBreakZoom>100</PageBreakZoom>
+            <Panes>
+                <Pane>
+                    <Number>3</Number>
+                    <ActiveRow>11</ActiveRow>
+                    <ActiveCol>15</ActiveCol>
+                    <RangeSelection>R12C16</RangeSelection>
+                </Pane>
+            </Panes>
+            <ProtectObjects>False</ProtectObjects>
+            <ProtectScenarios>False</ProtectScenarios>
+        </WorksheetOptions>
+    </Worksheet>
+</Workbook>

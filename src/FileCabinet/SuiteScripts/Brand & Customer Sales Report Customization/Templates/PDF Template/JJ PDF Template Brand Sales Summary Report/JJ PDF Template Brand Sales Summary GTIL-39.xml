@@ -1,0 +1,100 @@
+<?xml version="1.0"?><!DOCTYPE pdf PUBLIC "-//big.faceless.org//report" "report-1.1.dtd">
+<pdf>
+    <head>
+        <link name="NotoSans" type="font" subtype="truetype" src="${nsfont.NotoSans_Regular}" src-bold="${nsfont.NotoSans_Bold}" src-italic="${nsfont.NotoSans_Italic}" src-bolditalic="${nsfont.NotoSans_BoldItalic}" bytes="2" />
+        <#if .locale == "zh_CN">
+        <link name="NotoSansCJKsc" type="font" subtype="opentype" src="${nsfont.NotoSansCJKsc_Regular}" src-bold="${nsfont.NotoSansCJKsc_Bold}" bytes="2" />
+        <#elseif .locale == "zh_TW">
+        <link name="NotoSansCJKtc" type="font" subtype="opentype" src="${nsfont.NotoSansCJKtc_Regular}" src-bold="${nsfont.NotoSansCJKtc_Bold}" bytes="2" />
+        <#elseif .locale == "ja_JP">
+        <link name="NotoSansCJKjp" type="font" subtype="opentype" src="${nsfont.NotoSansCJKjp_Regular}" src-bold="${nsfont.NotoSansCJKjp_Bold}" bytes="2" />
+        <#elseif .locale == "ko_KR">
+        <link name="NotoSansCJKkr" type="font" subtype="opentype" src="${nsfont.NotoSansCJKkr_Regular}" src-bold="${nsfont.NotoSansCJKkr_Bold}" bytes="2" />
+        <#elseif .locale == "th_TH">
+        <link name="NotoSansThai" type="font" subtype="opentype" src="${nsfont.NotoSansThai_Regular}" src-bold="${nsfont.NotoSansThai_Bold}" bytes="2" />
+    </#if>
+        <macrolist>
+            <macro id="nlfooter">
+                <p>&nbsp;</p>
+            </macro>
+        </macrolist>
+        <style type="text/css">table { font-size: 9pt; table-layout: fixed; width: 100%;  }
+            th { font-weight: bold; font-size: 8pt; vertical-align: middle; padding: 5px 6px 3px; background-color: #009999; color: #FFFFFF; padding-bottom: 10px; padding-top: 10px; }
+            td { padding: 4px 6px; }
+            b { font-weight: bold; color: #333333; }
+        </style>
+    </head>
+    <body footer="nlfooter" footer-height="20pt" padding="0.5in 0.5in 0.5in 0.5in" size="A4">
+        <table style="background-color:#FFFFFF;border-style:hidden;"><tr>
+            <td>
+                <p><span style="font-size:26px;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<kbd><strong>&nbsp;Brand Sales Summary-Current Month</strong></kbd></span></p>
+
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size:20px;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;${record.header['asOfYear'].value}</span></p>
+            </td>
+        </tr></table>
+        &nbsp;
+
+        <table cellpadding="8" style="width: 100%;">
+            <thead>
+                <tr>
+                    <th style="width: 229px; height: 50px;"><span style="font-size:12px;">CURRENT MONTH</span></th>
+                    <th style="width: 82px; height: 50px;align:right;">
+                        <p><span style="font-size:12px;">Current<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Year</span></p>
+                    </th>
+                    <th style="width: 86px; height: 50px;align:right;">
+                        <p><span style="font-size:12px;">% of<br />Total<br />Sales</span></p>
+                    </th>
+                    <th style="width: 89px; height: 50px;align:right;">
+                        <p><span style="font-size:12px;">Previous<br />&nbsp; &nbsp; &nbsp; Year</span></p>
+                    </th>
+                    <th style="width: 64px; height: 50px;align:right;">
+                        <p><span style="font-size:12px;">&nbsp; &nbsp;&nbsp;&nbsp; % of<br />Previous<br /> &nbsp; &nbsp; &nbsp;&nbsp; Year</span></p>
+                    </th>
+                    <th style="width: 73px; height: 50px;align:right;">
+                        <p><span style="font-size:12px;">&nbsp; &nbsp;&nbsp;Change<br />Over Prev<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;Year</span></p>
+                    </th>
+                </tr>
+            </thead>
+            <#list record.lines as line>
+            <tr>
+            <td style="width: 229px; height: 17px;"><strong>${line['currentMonth'].text}</strong></td>
+            <td style="align:right;width: 50px; height: 17px;">${line['currentYear'].value}</td>
+            <td style="align:right;width: 50px; height: 17px;">${line['totalSales'].value}</td>
+            <td style="align:right;width: 50px; height: 17px;">${line['previousYear'].value}</td>
+            <td style="align:right;width: 50px; height: 17px;">${line['percentage_preyear'].value}</td>
+            <td style="align:right;width: 50px; height: 17px;">${line['change_OverYear'].value}</td>
+            </tr>
+            </#list>
+            <tr></tr>
+            <tr>
+            <td style="margin: 5px; width: 229px; height: 12px;">&nbsp;</td>
+            <td style="border-top: 1px solid black; margin: 5px; align:right;width: 50px; height: 17px; padding-left: 2px;"><strong>${record.summary['currentYear'].value}</strong></td>
+            <td style="border-top: 1px solid black; margin: 5px;align:right;width: 50px; height: 17px; padding-left: 2px;"><strong>100%</strong></td>
+            <td style="border-top: 1px solid black; margin: 5px; align:right;width: 50px; height: 17px; padding-left: 2px;"><strong>${record.summary['previousYear'].value}</strong></td>
+            <td style="border-top: 1px solid black; margin: 5px;align:right; width: 50px; height: 17px; padding-left: 2px;"><strong>100%</strong></td>
+            <td style="border-top: 1px solid black; margin: 5px;align:right; width: 50px; height: 17px; padding-left: 2px;"><strong>${record.summary['change_OverYear'].value}</strong></td>
+            </tr>
+            <tr>
+                <td style="width: 50px; height: 17px;">Shipping</td>
+                <td style="align:right;width: 50px; height: 17px;"> </td>
+                <td style="align:right;width: 50px; height: 17px;"> </td>
+                <td style="align:right;width: 50px; height: 17px;"> </td>
+                <td style="align:right;width: 50px; height: 17px;"> </td>
+                <td style="align:right;width: 50px; height: 17px;"> </td>
+            </tr>
+            <tr>
+                <td style="width: 50px; height: 17px;">Grand Total</td>
+                <td style="align:right;width: 50px; height: 17px;"><strong> </strong></td>
+                <td style="align:right;width: 50px; height: 17px;">&nbsp;</td>
+                <td style="align:right;width: 50px; height: 17px;"><strong> </strong></td>
+                <td style="align:right;width: 50px; height: 17px;">&nbsp;</td>
+                <td style="align:right;width: 50px; height: 17px;"><strong> </strong></td>
+            </tr>
+        </table>
+        <p>&nbsp;</p>
+
+        <p>&nbsp;</p>
+
+        <p>&nbsp;</p>
+    </body>
+</pdf>

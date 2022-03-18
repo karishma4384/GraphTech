@@ -1,0 +1,92 @@
+<?xml version="1.0"?><!DOCTYPE pdf PUBLIC "-//big.faceless.org//report" "report-1.1.dtd">
+<pdf>
+    <head>
+        <link name="NotoSans" type="font" subtype="truetype" src="${nsfont.NotoSans_Regular}" src-bold="${nsfont.NotoSans_Bold}" src-italic="${nsfont.NotoSans_Italic}" src-bolditalic="${nsfont.NotoSans_BoldItalic}" bytes="2" />
+        <#if .locale == "zh_CN">
+        <link name="NotoSansCJKsc" type="font" subtype="opentype" src="${nsfont.NotoSansCJKsc_Regular}" src-bold="${nsfont.NotoSansCJKsc_Bold}" bytes="2" />
+        <#elseif .locale == "zh_TW">
+        <link name="NotoSansCJKtc" type="font" subtype="opentype" src="${nsfont.NotoSansCJKtc_Regular}" src-bold="${nsfont.NotoSansCJKtc_Bold}" bytes="2" />
+        <#elseif .locale == "ja_JP">
+        <link name="NotoSansCJKjp" type="font" subtype="opentype" src="${nsfont.NotoSansCJKjp_Regular}" src-bold="${nsfont.NotoSansCJKjp_Bold}" bytes="2" />
+        <#elseif .locale == "ko_KR">
+        <link name="NotoSansCJKkr" type="font" subtype="opentype" src="${nsfont.NotoSansCJKkr_Regular}" src-bold="${nsfont.NotoSansCJKkr_Bold}" bytes="2" />
+        <#elseif .locale == "th_TH">
+        <link name="NotoSansThai" type="font" subtype="opentype" src="${nsfont.NotoSansThai_Regular}" src-bold="${nsfont.NotoSansThai_Bold}" bytes="2" />
+    </#if>
+    <macrolist>
+        <macro id="nlfooter">
+            <p>&nbsp;</p>
+        </macro>
+    </macrolist>
+    <style type="text/css">table { font-size: 9pt; table-layout: fixed; width: 100%;  }
+        th { font-weight: bold; font-size: 8pt; vertical-align: middle; padding: 5px 6px 3px; background-color: #009999; color: #FFFFFF; padding-bottom: 10px; padding-top: 10px; }
+        td { padding: 4px 6px; }
+        b { font-weight: bold; color: #333333; }
+    </style>
+</head>
+<body footer="nlfooter" footer-height="20pt" padding="0.2in 0.2in 0.2in 0.2in" size="A4">
+<table style="background-color:#FFFFFF;border-style:hidden;"><tr>
+    <td>
+        <p><span style="font-size:26px;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<kbd><strong>&nbsp; &nbsp; &nbsp; &nbsp; Brand Detail-Current Month</strong></kbd></span></p>
+
+        <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<span style="font-size:20px;">${record.header['asOfMonth'].value}</span></p>
+    </td>
+</tr></table>
+&nbsp;
+
+<table cellpadding="8" style="width:100%;">
+    <thead>
+        <tr>
+            <th style="width: 141px; height: 50px;"><span style="font-size:12px;">&nbsp; CURRENT MONTH</span></th>
+            <th style="width: 125px; height: 50px;"><span style="font-size:12px;">Customer Type</span></th>
+            <th style="width: 82px; height: 50px;align:right;">
+                <p><span style="font-size:12px;">Current<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Year</span></p>
+            </th>
+            <th style="width: 69px; height: 50px;align:right;">
+                <p><span style="font-size:12px;">% of<br />Brand</span></p>
+            </th>
+            <th style="width: 82px; height: 50px;align:right;">
+                <p><span style="font-size:12px;">Previous<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Year</span></p>
+            </th>
+            <th style="width: 74px; height: 50px;align:right;">
+                <p><span style="font-size:12px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;% of<br />Previous<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Year</span></p>
+            </th>
+            <th style="width: 71px; height: 50px;align:right;">
+                <p><span style="font-size:12px;">&nbsp;&nbsp;&nbsp;&nbsp;Change<br />Over Prev<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Year</span></p>
+            </th>
+        </tr>
+    </thead>
+    <#list record.lines as line>
+    <tr>
+
+        <td style="width: 125px; height: 17px;"><strong>${line['brand'].value}</strong></td>
+        <td style="align:right;width: 82px; height: 17px;"><strong>${line['Channel'].value}</strong></td>
+        <td style="align:right;height: 17px; width: 69px;">${line['currentYear'].value}</td>
+        <td style="align:right;height: 17px; width: 82px;">${line['totalSales'].value}</td>
+        <td style="align:right;height: 17px; width: 74px;">${line['previousYear'].value}</td>
+        <td style="align:right;height: 17px; width: 71px;">${line['percentage_preyear'].value}</td>
+        <td style="align:right;height: 17px; width: 71px;">${line['change_OverYear'].value}</td>
+
+</tr>
+</#list>
+
+    <tr>
+        <td style="margin: 5px; width: 141px; height: 12px;">&nbsp;</td>
+        <td style="margin: 5px; width: 125px; height: 12px;">&nbsp;</td>
+        <td style="align:right;border-top: 1px solid black; margin: 5px; width: 82px; height: 12px;"><strong>${record.summary['currentYear'].value}</strong></td>
+        <td style="align:right;border-top: 1px solid black; margin: 5px; width: 69px; height: 12px;"><strong>${record.summary['totalSales'].value}</strong></td>
+        <td style="align:right;border-top: 1px solid black; margin: 5px; width: 82px; height: 12px;"><strong>${record.summary['previousYear'].value}</strong></td>
+        <td style="align:right;border-top: 1px solid black; margin: 5px; width: 74px; height: 12px;"><strong>${record.summary['percentage_preyear'].value}</strong></td>
+        <td style="align:right;border-top: 1px solid black; margin: 5px; width: 71px; height: 12px;"><strong>${record.summary['change_OverYear'].value}</strong></td>
+    </tr>
+
+
+</table>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+</body>
+        </pdf>

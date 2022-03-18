@@ -1,0 +1,96 @@
+<?xml version="1.0"?><!DOCTYPE pdf PUBLIC "-//big.faceless.org//report" "report-1.1.dtd">
+<pdf>
+    <head>
+        <link name="NotoSans" type="font" subtype="truetype" src="${nsfont.NotoSans_Regular}" src-bold="${nsfont.NotoSans_Bold}" src-italic="${nsfont.NotoSans_Italic}" src-bolditalic="${nsfont.NotoSans_BoldItalic}" bytes="2" />
+        <#if .locale == "zh_CN">
+        <link name="NotoSansCJKsc" type="font" subtype="opentype" src="${nsfont.NotoSansCJKsc_Regular}" src-bold="${nsfont.NotoSansCJKsc_Bold}" bytes="2" />
+        <#elseif .locale == "zh_TW">
+        <link name="NotoSansCJKtc" type="font" subtype="opentype" src="${nsfont.NotoSansCJKtc_Regular}" src-bold="${nsfont.NotoSansCJKtc_Bold}" bytes="2" />
+        <#elseif .locale == "ja_JP">
+        <link name="NotoSansCJKjp" type="font" subtype="opentype" src="${nsfont.NotoSansCJKjp_Regular}" src-bold="${nsfont.NotoSansCJKjp_Bold}" bytes="2" />
+        <#elseif .locale == "ko_KR">
+        <link name="NotoSansCJKkr" type="font" subtype="opentype" src="${nsfont.NotoSansCJKkr_Regular}" src-bold="${nsfont.NotoSansCJKkr_Bold}" bytes="2" />
+        <#elseif .locale == "th_TH">
+        <link name="NotoSansThai" type="font" subtype="opentype" src="${nsfont.NotoSansThai_Regular}" src-bold="${nsfont.NotoSansThai_Bold}" bytes="2" />
+    </#if>
+    <macrolist>
+        <macro id="nlfooter">
+            <p>&nbsp;</p>
+        </macro>
+    </macrolist>
+    <style type="text/css">table { font-size: 9pt; table-layout: fixed; width: 100%;  }
+        th { font-weight: bold; font-size: 8pt; vertical-align: middle; padding: 5px 6px 3px; background-color: #009999; color: #FFFFFF; padding-bottom: 10px; padding-top: 10px; }
+        td { padding: 6px 6px; }
+        b { font-weight: bold; color: #333333; }
+    </style>
+</head>
+<body footer="nlfooter" footer-height="20pt" padding="0.5in 0.5in 0.5in 0.5in" size="A4">
+<table style="background-color: rgb(255, 255, 255); border-style: hidden; width: 738px;"><tr>
+    <td style="width: 735px;">
+        <p><span style="font-size:26px;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<kbd><strong>Customer Sales Summary-Current Month</strong></kbd></span></p>
+
+        <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size:20px;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;${record.header['asOfMonth'].text} ${record.header['asOfYear'].value}</span></p>
+    </td>
+</tr></table>
+&nbsp;
+
+<table style="width: 655px;">
+    <thead>
+        <tr style="background-color: #009999;">
+            <th style="width: 163px;"><span style="font-size:12px;">CURRENT MONTH</span></th>
+            <th style="align:right;width: 87px; margin-left: 5px; margin-right: 5px;">Current<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Year</th>
+            <th style="align:right;width: 87px; margin-right: 5px;">
+                <p>% of<br />Total<br/> Sales</p>
+            </th>
+            <th style="align:right;width: 87px; margin-right: 5px;">Previous<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Year</th>
+            <th style="align:right;margin-right: 5px; width: 87px;">
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;% of<br />Previous<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Year</p>
+            </th>
+            <th style="align:right;width: 87px;">
+                <p>&nbsp;&nbsp;&nbsp;Change<br />over Prev<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Year</p>
+            </th>
+        </tr>
+    </thead>
+    <#list record.lines as line>
+    <tr>
+        <td style="width: 87px; height: 17px;"><b>${line['Channel'].text}</b></td>
+        <td style="align:right;width: 87px; height: 17px; margin-left: 5px; margin-right: 5px;">${line['currentYear'].value}</td>
+        <td style="align:right;width: 87px; height: 17px; margin-right: 5px;">${line['totalSales'].value}</td>
+        <td style="align:right;width: 87px; height: 17px; margin-right: 5px;">${line['previousYear'].value}</td>
+        <td style="align:right;width: 87px; height: 17px; margin-right: 5px;">${line['percentage_preyear'].value}</td>
+        <td style="align:right;width: 87px; height: 17px;">${line['change_OverYear'].value}</td>
+    </tr>
+</#list>
+<tr>
+    <td style="margin: 5px; width: 163px; height: 15px;">&nbsp;</td>
+    <td style="align:right;border-top: 1px solid black; width: 87px; height: 17px; margin-left: 5px; margin-right: 5px;"><b>${record.summary['currentYear'].value}</b></td>
+    <td style="align:right;border-top: 1px solid black; width: 87px; height: 17px; margin-right: 5px;"><b>${record.summary['totalSales'].value}</b></td>
+    <td style="align:right;border-top: 1px solid black; width: 87px; height: 17px; margin-right: 5px;"><b>${record.summary['previousYear'].value}</b></td>
+    <td style="align:right;border-top: 1px solid black; width: 87px; height: 17px; margin-right: 5px;"><b>${record.summary['percentage_preyear'].value}</b></td>
+    <td style="align:right;border-top: 1px solid black; width: 87px; height: 17px;"><b>${record.summary['change_OverYear'].value}</b></td>
+</tr>
+<tr>
+    <td style="width: 163px; height: 15px;">Shipping</td>
+    <td style="align:right;width: 87px; height: 15px;"></td>
+    <td style="align:right;width: 87px; height: 15px;"></td>
+    <td style="align:right;width: 87px; height: 15px;"></td>
+    <td style="align:right;width: 87px; height: 15px;"></td>
+    <td style="align:right;width: 87px; height: 15px;">&nbsp;</td>
+</tr>
+<tr>
+    <td style="width: 163px; height: 13px;">Grand Total</td>
+    <td style="align:right;width: 87px; height: 13px;"><strong></strong></td>
+    <td style="align:right;width: 87px; height: 13px;">&nbsp;</td>
+    <td style="align:right;width: 87px; height: 13px;"><strong></strong></td>
+    <td style="align:right;width: 87px; height: 13px;">&nbsp;</td>
+    <td style="align:right;width: 87px; height: 13px;"><strong></strong></td>
+</tr>
+</table>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+        </body>
+        </pdf>
